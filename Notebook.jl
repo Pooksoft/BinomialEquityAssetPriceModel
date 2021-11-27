@@ -50,7 +50,7 @@ ticker_symbol = "AAPL";
 
 # ╔═╡ a209888e-1b37-48bd-8262-ff13ab030f04
 md"""
-###### Step 1: Pull Down Adjusted Daily Close Price Data from [AlphaVantage](https://www.alphavantage.co) for $(ticker_symbol)
+###### Step 1: Download the adjusted daily close price for $(ticker_symbol) using the [AlphaVantage](https://www.alphavantage.co) financial data API
 """
 
 # ╔═╡ a82f6962-49fc-4043-aa07-bae669444c9e
