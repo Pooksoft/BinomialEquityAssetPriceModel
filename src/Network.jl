@@ -3,7 +3,7 @@ function http_get_call_with_url(url::String)::Some
     try
         
         # should we check if this string is formatted as a URL?
-        if (occursin("http://", url) == false)
+        if (occursin("https://", url) == false)
             throw(ArgumentError("url $(url) is not properly formatted"))
         end
 
