@@ -14,6 +14,7 @@ begin
 	using BSON
 	using CSV
 	using KernelDensity
+	using Dates
 	
 	# setup paths to stuff
 	_PATH_TO_ROOT = pwd()
@@ -103,6 +104,9 @@ md"""
 ###### Develop a model of the return distribution using Kernel Density Estimation (KDE)  
 """
 
+# ╔═╡ 64fa80dd-08c5-4da7-b29a-d25ece27f4f4
+rt = compute_log_return_table(data_table,:timestamp,:close)
+
 # ╔═╡ f9abc260-703d-4832-bfbb-225e9b9b4223
 begin
 
@@ -135,6 +139,7 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 KernelDensity = "5ab0869b-81aa-558d-bb23-cbf5423bbe9b"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
@@ -691,6 +696,7 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╟─a209888e-1b37-48bd-8262-ff13ab030f04
 # ╠═a82f6962-49fc-4043-aa07-bae669444c9e
 # ╟─c766b836-4388-4719-adbe-a9c2dc8032a6
+# ╠═64fa80dd-08c5-4da7-b29a-d25ece27f4f4
 # ╠═f9abc260-703d-4832-bfbb-225e9b9b4223
 # ╠═a65d71e4-1aff-4a42-9e02-5c2c07faf6c2
 # ╟─f2751bf4-4fb3-11ec-33a0-ddd5b310db93
